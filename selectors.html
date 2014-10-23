@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="base.css"/>
+    <style>
+        .red { /* Class Selector */
+            background-color: red;
+        }
+
+        div { /*// element selector*/
+            height: 100px;
+            width: 100px;
+            background-color: #eee;
+            margin: 1em;
+            /*font: 600 1em 'Helvetica Neue';  shorthand property x */
+            font-size: 1em;
+            font-weight: 600;
+            font-family: 'Helvetica Neue';
+        }
+
+
+
+        [data-tin="someinfo"] { /* Attribute selector */
+            background-color: green;
+        }
+
+        #tin {
+            background-color: yellow;
+        }
+
+        div span p.data > p#name > span {
+            background-color: blue;
+        }
+
+        div { /* 0 0 0 1 */
+            background-color: red;
+        }
+
+        div.data { /* 0 0 1 1 */
+            background-color: green;
+        }
+
+        a:hover { /* pseudo-class selector */
+            background-color: black;
+            color: white;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    Specificity - used to resolve conflicts when the different rules are applied to the same element
+    <p>div span p.data > p#name > span</p>
+    <p>0 1 1 5</p>
+    <p>Inline Styles | ID Selectors | Class / Attribute Selectors | Elements </p>
+
+
+    <div>
+
+    </div>
+    <div class="red" style="background-color: blue;">
+
+    </div>
+    <div data-tin="someinfoasdf">
+
+    </div>
+    <div data-tin="someinfoffdf">
+
+    </div>
+    <div id="tin">
+
+    </div>
+
+    <div class="data">
+
+    </div>
+    <a href="datq">data</a>
+</body>
+</html>

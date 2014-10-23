@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Combinators</title>
+    <link rel="stylesheet" href="base.css"/>
+    <style>
+        div > div > span { /* > - Child combinator */
+            background-color: red;
+        }
+
+        div span { /* <space> - descendant combinator */
+            color: green;
+        }
+
+        #edwin {
+            background-color: darkred;
+        }
+
+        #edwin + li { /* adjacent sibling selector */
+            background-color: green;
+        }
+
+        span, p { /* , - grouping */
+            font-family: "Consolas", "Menlo", "Courier", monospace;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <span>
+                Doubly nested span
+            </span>
+        </div>
+    </div>
+<div>
+    <span>
+        Span nested at a single level
+    </span>
+</div>
+
+<ul>
+    <li>Tin</li>
+    <li id="edwin">Edwin</li>
+    <li>Ray</li>
+    <li>Ray</li>
+    <li>Ray</li>
+    <li>Ray</li>
+</ul>
+</body>
+</html>
